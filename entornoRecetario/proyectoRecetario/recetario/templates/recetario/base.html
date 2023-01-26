@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  url '../../static/recetario/css/estilos.css'%}">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a  href="{% url 'inicio'%}">Inicio</a>
+            <a href="{% url 'receta'%}">Receta del dia</a>
+            <a href="{% url 'desayunos'%}">Desayunos</a>
+            <a href="{% url 'comidas'%}">Comidas</a>
+            <a href="{% url 'cenas'%}">Cenas</a>
+            <a href="{% url 'todas'%}">Todas las recetas</a>
+        </div>
+    </header>
+    <div id="contenido">
+        {% block contenido%}
+        Aqui va el contenido
+        {% endblock %}
+    </div>
+</body>
+
+</html>
