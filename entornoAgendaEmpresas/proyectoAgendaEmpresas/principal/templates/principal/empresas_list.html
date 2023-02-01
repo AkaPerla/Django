@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado</title>
+</head>
+<body>
+    <h1>Listado Empresas</h1>
+    <!-- se tiene que llamar a la clase que hemos creado en las views, se tiene que llamar como modelo_list -->
+    {% for e in empresas_list %}
+        <ul>
+            <li><a href="{% url 'detalles' e.id %}">{{e.nombre}}</a></li>
+            <li>{{e.tipo}}</li>
+        </ul>
+        <hr>
+    {% endfor %}
+</body>
+</html>
