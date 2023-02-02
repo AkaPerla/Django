@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-     <h1>DEtalle de {{empresas.nombre}}</h1>
+     <h1>Detalle de {{empresas.nombre}}</h1>
      <p>{{empresas.tipo}}</p>
      <p>{{empresas.direccion}}</p>
      <p>{{empresas.telefono}}</p>
      <p>{{empresas.created}}</p>
      <p>{{empresas.updated}}</p>
-
+    <a href="{% url 'borrar' empresas.id %}">Borrar</a>,
+    <a href="{% url 'modificar' empresas.id %}">Modificar</a>
 </body>
 </html>

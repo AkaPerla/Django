@@ -7,6 +7,7 @@
     <title>Listado</title>
 </head>
 <body>
+    <a href="{%url 'crear' %}"> Crear empresa </a>
     <h1>Listado Empresas</h1>
     <!-- se tiene que llamar a la clase que hemos creado en las views, se tiene que llamar como modelo_list -->
     {% for e in empresas_list %}
